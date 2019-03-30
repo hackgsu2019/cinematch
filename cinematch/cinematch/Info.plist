@@ -41,5 +41,32 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLName</key>
+            <string>com.monirakhan.cinematch</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>cinematch</string>
+            </array>
+        </dict>
+    </array>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>snapchat</string>
+        <string>bitmoji-sdk</string>
+        <string>itms-apps</string>
+        <string>cinematch</string>
+    </array>
+    <key>SCSDKClientId</key>
+    <string>57f0e64b-c0ec-4c27-aa5d-8bfaecb728ed</string><key>SCSDKRedirectUrl</key>
+    <string>cinematch://snapchat</string>
+    <key>SCSDKScopes</key>
+    <array>
+        <string>https://auth.snapchat.com/oauth2/api/user.external_id</string>
+        <string>https://auth.snapchat.com/oauth2/api/user.display_name</string>
+        <string>https://auth.snapchat.com/oauth2/api/user.bitmoji.avatar</string>
+    </array>
 </dict>
 </plist>
