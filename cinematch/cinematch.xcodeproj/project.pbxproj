@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C31C36DCD918EB0F4DDA775A /* Pods_cinematch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 998165E532B6D94136980AA3 /* Pods_cinematch.framework */; };
 		F759F882224FB39C008CF2E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F759F881224FB39C008CF2E4 /* AppDelegate.swift */; };
 		F759F884224FB39C008CF2E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F759F883224FB39C008CF2E4 /* ViewController.swift */; };
 		F759F887224FB39C008CF2E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F759F885224FB39C008CF2E4 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		281CFA66E74F5235F4BE2745 /* Pods-cinematch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cinematch.release.xcconfig"; path = "Target Support Files/Pods-cinematch/Pods-cinematch.release.xcconfig"; sourceTree = "<group>"; };
+		998165E532B6D94136980AA3 /* Pods_cinematch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cinematch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8922E9A403B341062B330F1 /* Pods-cinematch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cinematch.debug.xcconfig"; path = "Target Support Files/Pods-cinematch/Pods-cinematch.debug.xcconfig"; sourceTree = "<group>"; };
 		F759F87E224FB39C008CF2E4 /* cinematch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cinematch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F759F881224FB39C008CF2E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F759F883224FB39C008CF2E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C31C36DCD918EB0F4DDA775A /* Pods_cinematch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3CB5F27F8A9D1059864823A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				998165E532B6D94136980AA3 /* Pods_cinematch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		86CF23FD8F459F99263C6680 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A8922E9A403B341062B330F1 /* Pods-cinematch.debug.xcconfig */,
+				281CFA66E74F5235F4BE2745 /* Pods-cinematch.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F759F875224FB39C008CF2E4 = {
 			isa = PBXGroup;
 			children = (
 				F759F880224FB39C008CF2E4 /* cinematch */,
 				F759F87F224FB39C008CF2E4 /* Products */,
+				86CF23FD8F459F99263C6680 /* Pods */,
+				3CB5F27F8A9D1059864823A6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F759F890224FB39D008CF2E4 /* Build configuration list for PBXNativeTarget "cinematch" */;
 			buildPhases = (
+				182EB6D67FBCD486564DF76E /* [CP] Check Pods Manifest.lock */,
 				F759F87A224FB39C008CF2E4 /* Sources */,
 				F759F87B224FB39C008CF2E4 /* Frameworks */,
 				F759F87C224FB39C008CF2E4 /* Resources */,
+				AD353AAA049DBAABCA70CEFF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,63 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		182EB6D67FBCD486564DF76E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-cinematch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD353AAA049DBAABCA70CEFF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-cinematch/Pods-cinematch-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
+				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
+				"${PODS_ROOT}/SnapSDK/SCSDKBitmojiKit.framework",
+				"${PODS_ROOT}/SnapSDK/SCSDKCoreKit.framework",
+				"${PODS_ROOT}/SnapSDK/SCSDKCreativeKit.framework",
+				"${PODS_ROOT}/SnapSDK/SCSDKLoginKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCSDKBitmojiKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCSDKCreativeKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCSDKLoginKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-cinematch/Pods-cinematch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F759F87A224FB39C008CF2E4 /* Sources */ = {
@@ -280,6 +364,7 @@
 		};
 		F759F891224FB39D008CF2E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8922E9A403B341062B330F1 /* Pods-cinematch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +383,7 @@
 		};
 		F759F892224FB39D008CF2E4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 281CFA66E74F5235F4BE2745 /* Pods-cinematch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
